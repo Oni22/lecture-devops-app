@@ -143,7 +143,7 @@ provisioner "remote-exec" {
         "sudo git clone https://github.com/RufusGladiuz/JenkinsJobCreation.git",
         "cd JenkinsJobCreation/",
         "sudo python3 jenkinsConfig.py devops admin123 Todo-App ${var.githubRepo}",
-        "sudo python3 ${var.githubRepo} ${var.githubAccessToken}",
+        "sudo python3 webhookAutomation.py ${var.githubRepo} ${var.githubAccessToken}",
         "cd ..",
         "rm -R JenkinsJobCreation",
     ]
