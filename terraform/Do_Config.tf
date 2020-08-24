@@ -123,14 +123,12 @@ provisioner "remote-exec" {
         "echo 'set httpd port 2812 \n use address' ${digitalocean_droplet.web1.ipv4_address} '\n allow 0.0.0.0/0.0.0.0 \n allow admin:monit' >> /etc/monit/monitrc",
         "monit reload",
 
-       //TODO: HTTPS
-       //"sudo apt-get update",
-       //"sudo apt-get install software-properties-common",
-       #"sudo add-apt-repository universe",
-       #"sudo add-apt-repository ppa:certbot/certbot",
-       #"sudo apt-get update",
-       #"sudo apt-get install certbot python3-certbot-apache",
-       #"sudo certbot --apache",
+        //HTTPS
+        "sudo apt update",
+        "sudo apt install snapd -y",
+        "sudo snap install --classic certbot",
+        //source: https://hodovi.ch/blog/securing-a-site-with-letsencrypt-aws-and-terraform/
+        "sudo certbot --nginx --email onur-ozkan@hotmail.de --agree-tos -d 'rouven-onur.tk' -n",
 
 
     ]
