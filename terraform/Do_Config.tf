@@ -115,21 +115,12 @@ provisioner "remote-exec" {
         "sudo usermod -aG docker jenkins",
         "sudo systemctl restart jenkins",
         "sudo sleep 30",
-        //TODO: Setup Webhook
 
         //Monitoring
         "sudo apt-get install monit -y",
         "monit",
         "echo 'set httpd port 2812 \n use address' ${digitalocean_droplet.web1.ipv4_address} '\n allow 0.0.0.0/0.0.0.0 \n allow admin:monit' >> /etc/monit/monitrc",
         "monit reload",
-
-        //HTTPS
-        "sudo apt update",
-        "sudo apt install snapd -y",
-        "sudo snap install --classic certbot",
-        //source: https://hodovi.ch/blog/securing-a-site-with-letsencrypt-aws-and-terraform/
-        "sudo certbot --nginx --email onur-ozkan@hotmail.de --agree-tos -d 'rouven-onur.tk' -n",
-
 
     ]
 }
@@ -158,6 +149,13 @@ provisioner "remote-exec" {
       "rm -r /etc/nginx/sites-available/default",
       "cp default /etc/nginx/sites-available/",
       "sudo service nginx restart",
+
+        //HTTPS
+        "sudo apt update",
+        "sudo apt install snapd -y",
+        "sudo snap install --classic certbot",
+        //source: https://hodovi.ch/blog/securing-a-site-with-letsencrypt-aws-and-terraform/
+        "sudo certbot --nginx --email onur-ozkan@hotmail.de --agree-tos -d 'rouven-onur.tk' -n",
     ]
 }
 
