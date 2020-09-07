@@ -19,7 +19,7 @@ Wir verwenden...
 - **MongoDB** - Vorgegeben durch Dozenten
 - **KasAPI** - Für die Automatisierung der Domain
 - **Certbot** - Zum aufsetzen von Https
-- 
+  
 ## Erklärung des Autmomationsprocesses
 1. Die React App mit dem Jenkinsfile wird auf einen gesonderten "deploy" branch gepusht
 2. Jenkins horcht auf diesen Branch pulled diesen und liest das Jenkinsfile aus sobald ein update verfügbar ist
