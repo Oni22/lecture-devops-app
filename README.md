@@ -19,5 +19,5 @@
 - pub_key -> Is the directory to the public key you created
 - pvt_key -> Is the directory to the private key you created
 - ssh_fingerprint -> Is the SSH-Fingerprint you copyed from digital ocean
-
+- You can login to the services with the username devops and the password admin123
 
