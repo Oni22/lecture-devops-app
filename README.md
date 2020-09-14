@@ -14,6 +14,7 @@
 - domain_name -> Is the name you choose for your domain on Kass
 - gitHubAccessToken -> Is the **git-token** you created on your git account
 - gitHubRepo -> Is the checkout link of the repository you just forked
+- signin into your all-inkl KAS Area and navigate to "Accounts" to get your customernumber
 - kas_password -> Is the password you selected for your kas account
 - kas_username -> Is your customernumber for your kas account
 - pub_key -> Is the directory to the public key you created
