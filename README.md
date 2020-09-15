@@ -8,8 +8,11 @@
 - [Install Terraform to your local device](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 - Clone this Repo https://github.com/RufusGladiuz/TODO_InfrastructureAsCode.git
 - Open a console and navigate to the just cloned repo into the folder Jenkins Job Automation/terraform
-- Run the command terraform apply
-- The script will now ask you for variables it needs to allocate and set up your server
+- In the just cloned repo navigate to the folder terraform and create a file named production.tfvars
+- To that file add the Variables mentioned below in the fasion variablename = value
+- Open a console and navigate to the terraform folder. Run the command terraform apply -var-file="production.tfvars"
+
+## Variables
 - do_token -> Is the **Digital-Ocean API Token**
 - domain_name -> Is the name you choose for your domain on Kass
 - gitHubAccessToken -> Is the **git-token** you created on your git account
