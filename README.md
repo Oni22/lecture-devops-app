@@ -19,8 +19,8 @@
 - domain_name -> Is the name you choose for your domain on Kass
 - gitHubAccessToken -> Is the **git-token** you created on your git account
 - gitHubRepo -> Is the checkout link of the repository you just forked
-- kas_password -> Is the password you selected for your kas account
-- kas_username -> Is your customernumber for your kas account
+- kas_password -> Is the kas-password you selected for your kas account
+- kas_username -> Is your kas-username for your kas account
 - pub_key -> Is the directory to the public key you created
 - pvt_key -> Is the directory to the private key you created
 - ssh_fingerprint -> Is the SSH-Fingerprint you copyed from digital ocean
